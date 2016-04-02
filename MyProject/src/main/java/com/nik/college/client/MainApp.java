@@ -22,20 +22,20 @@ public class MainApp {
 		StudentDoaService studentService;
 		studentService= (StudentDoaService)container.getBean("studentService");
 		
-		Student student = new Student("Nikhil", "Surti", "9558885756","n@n..com");
-		studentService.addStudent(student);
+		//Student student = new Student("Nikhil", "Surti", "9558885756","n@n..com");
+		//studentService.addStudent(student);
 		
 		
 		FacultyDaoService facultyService;
 		facultyService = (FacultyDaoService)container.getBean("facultyService");
-		Faculty faculty = new Faculty("My ken Chung", "7896655412", "ken@chung.com","Fac009");
+		//Faculty faculty = new Faculty("My ken Chung", "7896655412", "ken@chung.com","Fac009");
 		
-		facultyService.insertFaculty(faculty);
+		//facultyService.insertFaculty(faculty);
 
 		CourseDaoService courseService;
 		courseService= (CourseDaoService) container.getBean("courseService");
-		Course course =new Course("CS548", "Adv. Java", "A", 1);
-		courseService.insertCourse(course);
+		//Course course =new Course("CS548", "Adv. Java", "A", 1);
+		//courseService.insertCourse(course);
 		
 		//Course course = courseService.findCourseByName("Java");
 
