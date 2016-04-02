@@ -29,9 +29,6 @@ public class MainApp {
 		CourseDaoService courseService;
 		courseService= (CourseDaoService) container.getBean("courseService");
 		
-		//facultyService.updatefaculty(f1.getFacultyId(),f1);
-		//Course course = new Course("cs548","Java","A", 11);
-		//courseService.insertCourse(course);
 		
 
 	}
