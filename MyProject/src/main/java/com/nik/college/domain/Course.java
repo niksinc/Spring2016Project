@@ -2,27 +2,25 @@ package com.nik.college.domain;
 
 public class Course {
 	
-	private long courseId;
+	private int courseId;
 	private String courseCode;
 	private String courseName;
 	private String courseSection;
 	private int facultyId;
 	
-	
-	public Course(String courseCode,String CourseName,String courseSection,int facultyId){
+	public Course(String courseCode,String courseName,String courseSection,int facultyId){
 		this.courseCode=courseCode;
 		this.courseName=courseName;
 		this.courseSection=courseSection;
 		this.facultyId=facultyId;
 	}
 	
-
-	public long getCourseId() {
+	public int getCourseId() {
 		return courseId;
 	}
 
 
-	public void setCourseId(long courseId) {
+	public void setCourseId(int courseId) {
 		this.courseId = courseId;
 	}
 
