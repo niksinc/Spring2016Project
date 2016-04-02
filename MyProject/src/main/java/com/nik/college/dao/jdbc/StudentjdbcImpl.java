@@ -45,7 +45,7 @@ public class StudentjdbcImpl implements StudentDao{
 		jdbcInsert = new SimpleJdbcInsert(dataSource)
 		                 .withTableName("student")
 		                 .usingGeneratedKeyColumns("id")
-		                 .usingColumns("name", "lastName", "phoneNumber");
+		                 .usingColumns("name", "lastName", "phoneNumber","email");
 	}
 	
 	public int getStudentCount() {
@@ -96,8 +96,8 @@ public class StudentjdbcImpl implements StudentDao{
 
 	public int updateStudent(long id, Student student) {
 		
-		String sql = "update student  set name=:name ,lastName:=lastName,phoneNumber:=phoneNumber where id=:id";
-		String name,lastName,phoneNumber;
+		String sql = "update student  set name=:name ,lastName:=lastName,phoneNumber:=phoneNumber, email:=email where id=:id";
+		String name,lastName,phoneNumber,email;
 		System.out.println("the update query ois"+sql);
 		MapSqlParameterSource params;
 		int rowsAffected;
@@ -105,11 +105,13 @@ public class StudentjdbcImpl implements StudentDao{
 		name = student.getName();
 		lastName = student.getLastName();
 		phoneNumber = student.getPhoneNumber();
+		email = student.getEmail();
 		
 		params = new MapSqlParameterSource("id", id);
 		params.addValue("name", name);
 		params.addValue("lastName", lastName);
 		params.addValue("phoneNumber", phoneNumber);
+		params.addValue("email", email);
 		rowsAffected = dbTemplate.update(sql, params);
 		
 		return rowsAffected;

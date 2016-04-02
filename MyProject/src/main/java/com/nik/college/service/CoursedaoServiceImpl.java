@@ -13,34 +13,32 @@ import com.nik.college.domain.Course;
 public class CoursedaoServiceImpl implements CourseDaoService {
 	@Autowired
 	private CourseDao coursejdbc;
-	public Course findCourseByCourseCode(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Course findCourseByCourseCode(int id) {
+		return coursejdbc.findCourseByCourseCode(id);
 	}
 
 	public Course findCourseByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return coursejdbc.findCourseByName(name);
 	}
 
 	public void insertCourse(Course course) {
-		// TODO Auto-generated method stub
+		
 		coursejdbc.insertCourse(course);
 	}
 
 	public void deleteCourse(Course course) {
-		// TODO Auto-generated method stub
+		coursejdbc.deleteCourse(course);
 		
 	}
 
-	public int updateCourse(long id, Course course) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int updateCourse(int id, Course course) {
+		
+		return coursejdbc.updateCourse(id, course);
 	}
 
 	public int getCourseCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return coursejdbc.getCourseCount();
 	}
 
 }

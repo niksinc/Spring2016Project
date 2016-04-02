@@ -43,8 +43,8 @@ public class FacultyjdbcImpl implements FacultyDao {
 		jdbcInsert = new SimpleJdbcInsert(dataSource)
 		                 .withTableName("faculty")
 		                 .usingGeneratedKeyColumns("facultyId")
-		                 .usingColumns("facultyName", "phoneNumber", "email");
-		System.out.println("i am in the FacultyJdbc0");
+		                 .usingColumns("facultyName", "phoneNumber", "email","facultyCode");
+		//System.out.println("i am in the FacultyJdbc0");
 	}
 	
 	public Faculty findCourseByIdCode(int id) {
