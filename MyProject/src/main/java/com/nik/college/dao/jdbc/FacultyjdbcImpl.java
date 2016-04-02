@@ -77,7 +77,7 @@ public class FacultyjdbcImpl implements FacultyDao {
 
 	public int updatefaculty(int facultyId, Faculty faculty) {
 		// TODO Auto-generated method stub
-		String sql = "update faculty  set facultyName=:facultyName,phoneNumber:=phoneNumber,email:=email,facultyCode:=facultyCode where facultyId=:facultyId";
+		String sql = "update faculty  set facultyName=:facultyName,phoneNumber=:phoneNumber,email=:email,facultyCode=:facultyCode where facultyId=:facultyId";
 		String facultyName,phoneNumber,email,facultyCode;
 		MapSqlParameterSource params;
 		int rowsAffected;
@@ -88,11 +88,11 @@ public class FacultyjdbcImpl implements FacultyDao {
 		email = faculty.getEmail();
 		
 		params = new MapSqlParameterSource("facultyId", facultyId);
-		
+		params.addValue("email", email);
 		params.addValue("facultyName", facultyName);
 		params.addValue("phoneNumber", phoneNumber);
 		params.addValue("facultyCode", facultyCode);
-		params.addValue("email", email);
+		
 		System.out.println("--- sql is ---"+params.getValue("email"));
 		rowsAffected = dbTemplate.update(sql, params);
 		

@@ -27,9 +27,11 @@ public class MainApp {
 		//Faculty faculty =new Faculty("MR V.zenden", "0987654321", "n@n.com");
 		//facultyService.insertFaculty(faculty);
 		Faculty f1 = facultyService.findFacultyByFacultyCode("fa007");
-		f1.setEmail("m@m.com");
-		System.out.println("the emmea is" +f1.getEmail());
-		facultyService.updatefaculty(f1.getFacultyId(), f1);
+		//f1.setEmail("nikhil@gmail.com");
+		//f1.setFacultyName("nikhil");
+		//f1.setPhoneNumber("66566565");
+		//System.out.println("the emmea is" +f1.getEmail());
+		facultyService.updatefaculty(f1.getFacultyId(),f1);
 		
 		//facultyService.deleteFaculty(f1);
 		//System.out.println(f1.getEmail());

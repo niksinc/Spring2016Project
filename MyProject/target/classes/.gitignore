@@ -1,0 +1,9 @@
+/META-INF/
+/app-context.xml
+/com/
+/datasource.xml
+/jdbc-dao.xml
+/jdbc.properties
+/log4j.properties
+/log4j.xml
+/service.xml

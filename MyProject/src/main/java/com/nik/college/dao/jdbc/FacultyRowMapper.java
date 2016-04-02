@@ -25,6 +25,7 @@ public class FacultyRowMapper implements RowMapper<Faculty> {
 		faculty.setFacultyId(resultSet.getInt("facultyId"));
 		faculty.setEmail(email);
 		System.out.println("email is mapper is "+email);
+		System.out.println("name is mapper is "+facultyName);
 		faculty.setFacultyCode(facultyCode);
 		faculty.setFacultyName(facultyName);
 		faculty.setPhoneNumber(phoneNumber);
